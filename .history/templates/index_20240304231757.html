@@ -1,0 +1,76 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/mystyle.css'%}">
+</head>
+<body>
+  <!-- <h1>Having same mindset</h1>
+    
+    <img src="{% static 'image/pizza.jpg' %}" height="200px" width='300px'>
+
+    <h1>Valhalla- The way to haven</h1>
+    <h1>{{name}}</h1>
+    <h3> {{name}}</h3>
+
+    <hr>
+    <h2>list of names</h2>
+
+        {%for data in girlfriends_names%}
+            <p>{{forloop.counter}} {{data}}</p>
+        {% endfor %}
+        
+    </hr>
+
+<h2>List of student who scored more then 20</h2>
+
+    {% for std in std_details %}
+        {% if std.mark > 20  %}
+        
+        <p>{{std.name}} has scored {{std.mark }}</p>
+        {% endif %}
+    {% endfor %}
+
+<h2>Data in table</h2>
+<table border='1px'>
+    <tr>
+        <th>Name</th>
+        <th>age</th>
+        <th>mark</th>
+        <th>address</th>
+        <th>gender</th>
+    </tr>
+    {%for data in std_details%}
+    <tr>
+        <td>{{data.name}}</td>
+        <td>{{data.age}}</td>
+        <td>{{data.mark}}</td>
+        <td>{{data.address}}</td>
+        <td>{{data.gender}}</td>
+    </tr>
+    {% endfor %}
+</table>
+<h1> Home </h1>
+
+<form action="result" method="POST">
+    {% csrf_token %}
+
+    num1 : <input type="text" name="num1"/> <br><br>
+    num2 : <input type="text" name="num2"/> <br><br>
+    <button  type="submit" value="SUBMIT"> Submit</button>
+</form> -->
+
+<h1> STUDENT FORM</h1>
+<form action="" method="POST">
+    {% csrf_token %}
+    {{form.as_p}}
+    <input type="submit" value="SUBMIT" >
+
+</form>
+
+</body>
+</html> 
